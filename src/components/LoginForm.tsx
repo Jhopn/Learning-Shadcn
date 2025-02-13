@@ -37,39 +37,41 @@ const LoginForm = () => {
     <div>
       <Form {...form}>
       <form onSubmit={form.handleSubmit( async (data) => console.log(data))} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input placeholder="Digite um E-mail" {...field} />
-              </FormControl>
-              <FormDescription>
-                Adicione um Email válido! 
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <Input placeholder="Escreva sua senha..." {...field} />
-              </FormControl>
-              <FormDescription>
-                Certifique de lembrar sua senha!
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit">Entrar</Button>
+        <div>
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder="Digite um E-mail" {...field} />
+                </FormControl>
+                <FormDescription>
+                  Adicione um Email válido! 
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Password</FormLabel>
+                <FormControl>
+                  <Input placeholder="Escreva sua senha..." {...field} />
+                </FormControl>
+                <FormDescription>
+                  Certifique de lembrar sua senha!
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <Button className="w-full" type="submit">Entrar</Button>
       </form>
     </Form>
      
